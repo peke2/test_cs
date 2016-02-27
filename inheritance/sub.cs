@@ -11,6 +11,7 @@ public class Sub : Base
 
 	public override int add(int a, int b)
 	{
+	//	return base.add(a,b);	//	ベースクラスへのアクセスは「super」じゃないので注意
 		return a + b;
 	}
 
