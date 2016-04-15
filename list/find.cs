@@ -10,13 +10,17 @@ class ListFindTest
 {
 	struct PARAM
 	{
-		public string	name;
-		public int		val;
+		public string		name;
+		public int			val;
+		public List<int>	list;
 
 		public PARAM(string name, int val)
 		{
 			this.name = name;
 			this.val = val;
+			this.list = new List<int>();
+			this.list.Add(3);
+			this.list.Add(5);
 		}
 	}
 
@@ -59,15 +63,18 @@ class ListFindTest
 		Console.WriteLine("---- Find [hello] ----");
 		p = list.Find(param=> param.name == "hello");
 		Console.WriteLine("result={0}->{1}", p.name, p.val);
+		Console.WriteLine("list count={0}", p.list.Count);
 
 		//	見つからない場合は、型<T>の規定値が返る
 		//	恐らく
 			//	PARAM.name = ""
-			//	PARAM.val = 0
+			//	PARAM.val  = 0
+			//	PARAM.list = null
 		Console.WriteLine("---- Find [Bad] ----");
 		p = list.Find(param=> param.name == "Bad");
 		Console.WriteLine("NULL?<{0}>", p);
 		Console.WriteLine("result={0}->{1}", p.name, p.val);
+		//Console.WriteLine("list count={0}", p.list.Count);	//	null参照で例外発生
 	}
 
 
