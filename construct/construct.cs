@@ -34,9 +34,16 @@ class Construct
 	{
 		//	オブジェクト初期化子
 		//	https://msdn.microsoft.com/ja-jp/library/bb384062.aspx
-		string	greeting = "Hello";
-	//	Info	info = new Info(){a=2, b=5, c=11, greeting="Hello"};	//	プロパティ「c」は外部からアクセス不可
-		Info	info = new Info(){a=2, b=5, greeting=greeting};
+
+	//	プロパティ「c」は外部からアクセス不可
+	//	Info	info = new Info(){a=2, b=5, c=11, greeting="Hello"};
+
+	//	string	greeting = "Hello";	//メンバーと同じ名前の変数を指定しても参照されない
+	//	Info	info = new Info(){a=2, b=5, greeting=greeting};
+	//	Info	info = new Info(){a=2, b=5, this.greeting=greeting};	//	「this」は静的プロパティ、静的メソッド、静的フィールド初期化子では使えない
+
+		string	greet_text = "Hello";
+		Info	info = new Info(){a=2, b=5, greeting=greet_text};
 
 		info.output();
 	}
