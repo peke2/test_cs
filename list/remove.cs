@@ -66,10 +66,27 @@ class ListRemoveTest
 		*/
 
 		//	これで対応が一番すっきり
-		list.RemoveAll(p => true == p.isHit("bbb"));
+		//list.RemoveAll(p => true == p.isHit("bbb"));
+
+		//	これでも普通にいける
+	/*	list.RemoveAll(p =>{
+			if( true == p.isHit("bbb") )	return	true;
+			return	false;
+		});
+		*/
+
+		//	デリゲート
+		list.RemoveAll(isHit);
+
 
 		Console.WriteLine("--------削除後");
 		writeList(list);
-
 	}
+
+	private static bool isHit(PARAM p)
+	{
+		if( true == p.isHit("bbb") )	return	true;
+		return	false;
+	}
+
 }
