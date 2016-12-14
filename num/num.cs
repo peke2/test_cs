@@ -26,6 +26,14 @@ class Num
 		d = int.MaxValue;
 		Console.WriteLine(d);
 
+		//	少数以下の扱い
+		//	キャストした場合は切り捨てになることを確認
+		Console.WriteLine("少数以下の扱い");
+		f = 1.6f;
+		Console.WriteLine(f);
+		int		i;
+		i = (int)f;
+		Console.WriteLine(i);
 	}
 }
 
