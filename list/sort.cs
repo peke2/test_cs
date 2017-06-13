@@ -22,6 +22,45 @@ class ListSort
 {
 	static void Main()
 	{
+		ListSort	ls = new ListSort();
+
+		Console.WriteLine("---- Descending Sort ----");
+		ls.sortDescending();
+
+		Console.WriteLine("");
+
+		Console.WriteLine("---- Ascending Sort ----");
+		ls.sortAscending();
+	}
+
+
+	public void sortAscending()
+	{
+		List<int> list = new List<int>();
+
+		list.Add(4);
+		list.Add(76);
+		list.Add(21);
+		list.Add(9);
+		list.Add(1);
+		list.Add(7);
+
+		Console.WriteLine("---- Before Sort ----");
+		foreach(int p in list){Console.Write("{0} ", p);}
+
+		Console.WriteLine("");
+
+		list.Sort((a,b)=> a-b);		//	-1:a<b / 0:a==b / 1:a>b
+									//	この状態を返せば昇順でソートされる
+
+		Console.WriteLine("---- After Sort ----");
+		foreach(int p in list){Console.Write("{0} ", p);}
+
+	}
+
+
+	public void sortDescending()
+	{
 		List<Param> list = new List<Param>();
 
 		list.Add(new Param(-43, "test"));
@@ -39,6 +78,5 @@ class ListSort
 		Console.WriteLine("---- After Sort ----");
 		foreach(Param p in list){Console.WriteLine("[{0}]->{1}", p.value, p.name);}
 
-	//	Console.WriteLine("result={0}", is_equal);
 	}
 }
