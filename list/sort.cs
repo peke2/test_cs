@@ -34,6 +34,8 @@ class ListSort
 		Console.WriteLine("---- Before Sort ----");
 		foreach(Param p in list){Console.WriteLine("[{0}]->{1}", p.value, p.name);}
 
+		//	降順のソート
+		//	結果がマイナスならばリストの前に、プラスならリストの後ろにくる
 		list.Sort((a,b)=> b.value - a.value);
 
 		Console.WriteLine("---- After Sort ----");
