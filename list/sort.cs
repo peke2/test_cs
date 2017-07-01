@@ -50,8 +50,13 @@ class ListSort
 
 		Console.WriteLine("");
 
-		list.Sort((a,b)=> a-b);		//	-1:a<b / 0:a==b / 1:a>b
+		//	昇順
+		list.Sort((a,b)=> a-b);		//	[マイナス] : a<b
+									//	[0]        : a==b
+									//	[プラス]   : a>b
 									//	この状態を返せば昇順でソートされる
+									//	数値をキーにして昇順でソートをしたければ
+									//	a - b を比較関数にセットする
 
 		Console.WriteLine("---- After Sort ----");
 		foreach(int p in list){Console.Write("{0} ", p);}
