@@ -4,20 +4,21 @@ using System.Collections.Generic;
 
 class TestArray
 {
+	//	スレッドのように処理を記述可能なyiledの使い方
+	//	Unityのコルーチンもこの仕組みを使っている
 	class Test
 	{
 		public IEnumerator<int> getParam()
 		{
 			for(int i=0; i<5; i++)
 			{
-				//ここに処理を書けばスレッドのように動くイベントが作れる
+				//ここに処理を書けばスレッドのように動くイベントも作れる
 
 				yield return i;
 			}
 			Console.WriteLine("完了");
 		}
 	}
-
 
 
 	static void Main()
