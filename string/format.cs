@@ -23,10 +23,21 @@ namespace TestString
 				//d*	10進数の桁指定(桁に満たない場合、0で埋められる)
 				//000	0プレースホルダー(0の部分を数値に置き換える)
 
-			str = string.Format("{0:d4}-{1:d2}-{2:d2}", year, month, day);
+			str = string.Format("{0:d4}-{1:d2}-{2:d2}", year, month, day);		//「1982-07-03」
 			Console.WriteLine(str);
 
-			str = string.Format("{0,6:00000}-{1:00}-{2,2}", year, month, day);
+			str = string.Format("{0,6:00000}-{1:00}-{2,2}", year, month, day);	//「 01982-07- 3」
+			Console.WriteLine(str);
+
+			int value;
+
+			value = 123456789;
+
+			//{i:n*}
+				//n*	nは「数値」を表す(付与された数字は小数点以下の桁数)
+			str = string.Format("{0:n}", value);	//「123,456,789.00」
+			Console.WriteLine(str);
+			str = string.Format("{0:n0}", value);	//「123,456,789」
 			Console.WriteLine(str);
 
 			//	Microsoftのページよりも、以下のサイトの説明が分かりやすい
