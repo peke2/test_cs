@@ -36,11 +36,11 @@ class Test
 	static void changeValue()
 	{
 		PosClass pc = new PosClass();
-		PosStruct ps = new PosStruct();
+		PosStruct ps;	//値なので new しなくても使える
 		pc.x = 1;
 		pc.y = 0;
 		ps.x = 1;
-		ps.y = 0;
+		ps.y = 5;
 
 		Console.WriteLine("-------- 変更前");
 		Console.WriteLine(pc);
