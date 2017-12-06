@@ -1,4 +1,4 @@
-//	operator “®ìŠm”F
+//	operator å‹•ä½œç¢ºèª
 
 using System;
 
@@ -31,7 +31,7 @@ class Test
 		Console.WriteLine(op_a * op_b);	//	15
 
 		TestOp op_c = new TestOp(7);
-		op_c *= op_b;					//	‚±‚ÌŒ`‚Å‚à‚¢‚¯‚é
+		op_c *= op_b;					//	ã“ã®å½¢ã§ã‚‚ã„ã‘ã‚‹
 
 		Console.WriteLine(op_c);		//	21
 	}
