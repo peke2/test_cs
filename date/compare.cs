@@ -11,7 +11,7 @@ class Compare
 		DateTime dc = new DateTime(2018,1,2);
 		DateTime dd = new DateTime(2017,12,31);
 
-		//	ƒ^ƒCƒ}[ŠJn‹ß•Ó‚Å‚Ì”äŠr
+		//	ã‚¿ã‚¤ãƒãƒ¼é–‹å§‹æ™‚è¿‘è¾ºã§ã®æ¯”è¼ƒ
 		DateTime st = new DateTime(1970,1,1);
 		Console.WriteLine("da="+da.ToString());
 		Console.WriteLine("st="+st.ToString());
@@ -30,17 +30,17 @@ class Compare
 			DateTime t1,
 			DateTime t2
 		)
-		0 ‚æ‚è¬‚³‚¢’l
-		t1 ‚ª t2 ‚æ‚è‚à‘O‚Ì“ú‚Å‚·B
+		0 ã‚ˆã‚Šå°ã•ã„å€¤
+		t1 ãŒ t2 ã‚ˆã‚Šã‚‚å‰ã®æ—¥æ™‚ã§ã™ã€‚
 
 		0
-		t1 ‚Í t2 ‚Æ“¯‚¶‚Å‚·B
+		t1 ã¯ t2 ã¨åŒã˜ã§ã™ã€‚
 
-		0 ‚æ‚è‘å‚«‚¢’l
-		t1 ‚ª t2 ‚æ‚èŒã‚Ì“ú‚Å‚·B
+		0 ã‚ˆã‚Šå¤§ãã„å€¤
+		t1 ãŒ t2 ã‚ˆã‚Šå¾Œã®æ—¥æ™‚ã§ã™ã€‚
 		*/
 
-		//	0‚Æ”äŠr‚µ‚½ê‡Aˆø”‚Ìu,v‚ğğŒ‚Ì‹L†(==A<A>)‚É’u‚«Š·‚¦‚ê‚Î‚»‚Ì‚Ü‚Ü“Ç‚ß‚é
+		//	0ã¨æ¯”è¼ƒã—ãŸå ´åˆã€å¼•æ•°ã®ã€Œ,ã€ã‚’æ¡ä»¶ã®è¨˜å·(==ã€<ã€>)ã«ç½®ãæ›ãˆã‚Œã°ãã®ã¾ã¾èª­ã‚ã‚‹
 		Console.WriteLine("da="+da.ToString());
 		Console.WriteLine("db="+db.ToString());
 		if( DateTime.Compare(da, db) == 0 )
