@@ -8,5 +8,7 @@
 # $ cd nullable
 # $ ../run.sh nullable
 
-../compile.sh $1.cs
-./$1.exe 2>&1 | iconv -f SJIS -t UTF8
+filename=${1%.*}
+
+../compile.sh $filename.cs
+./$filename.exe 2>&1 | iconv -f SJIS -t UTF8
