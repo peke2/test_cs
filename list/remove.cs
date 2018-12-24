@@ -49,13 +49,12 @@ class ListRemoveTest
 		Console.WriteLine("--------削除前");
 		writeList(list);
 
-		//	これはダメ
+		//	これはダメ(例外がスローされる)
 	/*	foreach(PARAM p in list)
 		{
 			if( true == p.isHit("bbb") )	list.Remove(p);
 		}
-		*/
-
+	*/
 		//	リストの要素の末尾からforループで要素を削除
 	/*	for(int i=list.Count-1; i>=0; i--)
 		{
