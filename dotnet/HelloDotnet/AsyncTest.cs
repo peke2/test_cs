@@ -15,7 +15,10 @@ namespace HelloDotnet
         
         public async Task<int> async1()
         {
-            await Task.Delay(5000);
+            await Task.Delay(4000);
+            Console.WriteLine("async1途中経過");
+            await Task.Delay(6000);
+            Console.WriteLine("async1完了");
             return 1;
         }
 
